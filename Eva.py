@@ -1,29 +1,13 @@
 """
- Name: Your Name
- Assignment: Lab 3
- Course: CS 330
- Semester: Fall 2018
- Instructor: Dr. Cao
- Date: the current date
- Sources consulted: any books, individuals, etc consulted
-
- Known Bugs: description of known bugs and other program imperfections
-
- Creativity: anything extra that you added to the lab
-
- Instructions: special instructions to user on how to execute your program
+Script to evaluate Naive Bayes Classifier predictions
 
 """
 import sys
 
 def EvaNB(predictionLabel, realLabel):
     """
-    This is the main function you need to implement.
-    You should compare line by line,
-    and calculate how many predictions are correct,
-    how many predictions are not correct. The output could be:
-
-    In total, there are ??? predictions. ??? are correct, and ??? are not correct.
+    compares line by line,
+    and calculates how many predictions are correct,
 
     """
     pred = 0
@@ -52,7 +36,6 @@ def CheckInput(argvs):
     return True
 
 def main():
-    # hint, the following codes are for your testing.
     if(not CheckInput(sys.argv)):
         sys.exit(0)
     EvaNB(sys.argv[1], sys.argv[2])
