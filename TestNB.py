@@ -1,32 +1,14 @@
 """
- Name: Max Staples
- Assignment: Lab 3
- Course: CS 330
- Semester: Fall 2018
- Instructor: Dr. Cao
- Date: the current date
- Sources consulted: Kasey Johnson, Connor Whyte
-
- Known Bugs: none
-
- Creativity: anything extra that you added to the lab
-
- Instructions: special instructions to user on how to execute your program
+ Script to test trained Naive Bayes Classifier
 
 """
 import sys
 
 def NBtest(data, model, prediction):
     """
-    This is the main function you need to implement.
-    It is load saved model file, and also load testing data TestDataNoLabel.txt,
-    and apply the trained model to make predictions.
-    You should save your predictions in prediction file,
-    each line would be a label, such as:
-    1
-    0
-    0
-    1
+    Loads saved model file, and also loads testing data TestDataNoLabel.txt,
+    then applies the trained model to make predictions.
+    Finally, saves predictions in prediction file,
     ...
     """
     r,c = 10,2
@@ -87,7 +69,7 @@ def NBtest(data, model, prediction):
 
 def CheckInput(argvs):
     """
-    This function will check the input. This program is supposed to test your Naive Bayesian Model on data downloaded in course website: TestDataNoLabel.txt. There should be two parameters for testing data and saved model
+    This function will check the input. This program tests the Naive Bayesian Model on data TestDataNoLabel.txt. There should be two parameters for testing data and saved model
     """
     if len(sys.argv) < 4:
         print("You should give at least three parameters for path of input testing file and trained NB model. For example:\n")
@@ -96,7 +78,6 @@ def CheckInput(argvs):
     return True
 
 def main():
-    # hint, the following codes are for your testing.
     if(not CheckInput(sys.argv)):
         sys.exit(0)
     NBtest(sys.argv[1], sys.argv[2], sys.argv[3])
