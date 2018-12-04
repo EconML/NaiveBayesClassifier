@@ -1,28 +1,13 @@
 """
- Name: Max Staples
- Assignment: Lab 3
- Course: CS 330
- Semester: Fall 2018
- Instructor: Dr. Cao
- Date: 10/15/2018
- Sources consulted: Kasey Johnson, Connor Whyte
-
- Known Bugs: None
-
- Creativity: anything extra that you added to the lab
-
- Instructions: special instructions to user on how to execute your program
+Trains the Naive Bayes Classifier
 
 """
 import sys
 
 def train(data, model):
     """
-    This is the main function you need to implement.
-    It is going to read TrainingData.txt, and calculate all probablities,
-    save them as a model file.
-    You should design what kind of data format to save the model,
-    and make sure you could read them back when you do the prediction.
+    Reads TrainingData.txt, and calculates all probablities,
+    then saves them as a model file.
     """
 
     play = 0
@@ -88,7 +73,7 @@ def train(data, model):
 
 def CheckInput(argvs):
     """
-    This function will check the input. This program is supposed to train a Naive Bayesian Model from data downloaded in course website: TrainingData.txt. There should be two parameters for training data and output model
+    This function will check the input. This program trains a Naive Bayesian Model from data TrainingData.txt. There should be two parameters for training data and output model
     """
     if len(sys.argv) < 3:
         print("You should give at least two parameters for path of input training file and output model. For example:\n")
@@ -98,7 +83,6 @@ def CheckInput(argvs):
     return True
 
 def main():
-    # hint, the following codes are for your testing.
     if(not CheckInput(sys.argv)):
         sys.exit(0)
     train(sys.argv[1], sys.argv[2])
